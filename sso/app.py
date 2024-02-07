@@ -46,7 +46,7 @@ def login_post():
 
     payload_token = jwt.encode(payload, secret, algorithm='HS256')
 
-    return redirect('?'.join((success_redirect, payload_token)))
+    return redirect('?'.join((success_redirect, f'token={payload_token}')))
 
 
 if __name__ == '__main__':
