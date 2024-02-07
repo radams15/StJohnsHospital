@@ -1,17 +1,21 @@
+import os
+
 from flask import *
 from werkzeug.exceptions import BadRequestKeyError
 import jwt
+from dotenv import load_dotenv
 
 from SSOManager import SSOManager
 from UserDao import UserDao
 
 app = Flask(__name__)
 
+load_dotenv('../.env')
+
 user_dao = UserDao("users.sqlite")
 sso_manager = SSOManager(user_dao)
 
-SECRET = 'a-very-long-secret-pls-dont-steal'
-
+secret = os.getenv('SECRET')
 
 @app.route('/login', methods=['GET'])
 def login_page():
@@ -40,7 +44,7 @@ def login_post():
         'roles': [x[0] for x in user_dao.user_roles(username)]
     }
 
-    payload_token = jwt.encode(payload, SECRET, algorithm='HS256')
+    payload_token = jwt.encode(payload, secret, algorithm='HS256')
 
     return redirect('?'.join((success_redirect, payload_token)))
 
