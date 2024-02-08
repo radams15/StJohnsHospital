@@ -50,7 +50,7 @@ def callback():
 
 @app.route('/all')
 @authorise
-def all(data):
+def view_all(data):
     if not any(x in data['roles'] for x in ['doctor']):
         return make_response({'status': 'failure', 'message': 'unauthorised'}, 400)
 
@@ -59,9 +59,9 @@ def all(data):
     return render_template('all.html', username=username, patient_data=patient_data_dao.data)
 
 
-@app.route('/')
+@app.route('/patient')
 @authorise
-def index(data):
+def patient(data):
     if not any(x in data['roles'] for x in ['patient']):
         return make_response({'status': 'failure', 'message': 'unauthorised'}, 400)
 
@@ -75,7 +75,20 @@ def index(data):
             )
     )
 
-    return render_template('index.html', username=username, patient_data=patient_data)
+    return render_template('patient.html', username=username, patient_data=patient_data)
+
+
+@app.route('/logout')
+@authorise
+def logout(data):
+    del session['authentication']
+    return redirect('/')
+
+
+@app.route('/')
+@authorise
+def index(data):
+    return render_template('index.html', roles=data['roles'])
 
 
 if __name__ == '__main__':

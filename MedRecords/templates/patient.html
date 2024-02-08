@@ -1,0 +1,16 @@
+<html lang="en">
+
+    <head>
+        <title>MedRecords</title>
+    </head>
+
+    <body>
+        <h1>MedRecords</h1>
+        <h2>User: {{ username }}</h2>
+
+    {% for evt in patient_data %}
+        <p>{{ evt }}</p>
+    {% endfor %}
+    </body>
+
+</html>
