@@ -14,13 +14,13 @@ auth_addr = os.getenv('AUTH_ADDR')
 
 app.secret_key = secret
 
+
 def authorise(f):
     @wraps(f)
     def decorator(*args, **kwargs):
         if 'authentication' in session.keys():
             auth = session['authentication']
             try:
-                print(auth)
                 data = jwt.decode(auth, secret, algorithms='HS256')
             except Exception as e:
                 print(e)
@@ -42,10 +42,11 @@ def callback():
     else:
         return make_response({'status': 'failure', 'message': 'invalid authorisation token'})
 
+
 @app.route('/')
 @authorise
 def index(data):
-    return 'Hello World!'
+    return render_template('index.html', username=data['username'])
 
 
 if __name__ == '__main__':
