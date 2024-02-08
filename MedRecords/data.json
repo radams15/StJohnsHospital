@@ -1,32 +1,32 @@
 [
-  {
-    "username": "patient1",
-    "records": [
-      {
-        "type": "visit",
-        "message": "patient came in complaining about pain walking, prescribed paracetamol and told to get rest",
-        "date": "2023-12-01"
-      },
-      {
-        "type": "visit",
-        "message": "patient returned again complaining about pain walking",
-        "date": "2023-12-07"
-      },
-      {
-        "type": "diagnosis",
-        "message": "diagnosed with broken ankle",
-        "date": "2023-12-07"
-      }
-    ]
-  },
-  {
-    "username": "patient2",
-    "records": [
-      {
-        "type": "visit",
-        "message": "patient reported burnt hand after touching naked flame, prescribed antiseptic cream and told to be careful next time",
-        "date": "2023-11-20"
-      }
-    ]
-  }
+ {
+  "username": "patient1",
+  "records": [
+   {
+    "type": "visit",
+    "message": "patient came in complaining about pain walking, prescribed paracetamol and told to get rest",
+    "date": "2023-12-01"
+   },
+   {
+    "type": "visit",
+    "message": "patient returned again complaining about pain walking",
+    "date": "2023-12-07"
+   },
+   {
+    "type": "diagnosis",
+    "message": "diagnosed with broken ankle",
+    "date": "2023-12-07"
+   }
+  ]
+ },
+ {
+  "username": "patient2",
+  "records": [
+   {
+    "type": "visit",
+    "message": "patient reported burnt hand after touching naked flame, prescribed antiseptic cream and told to be careful next time",
+    "date": "2023-11-20"
+   }
+  ]
+ }
 ]

@@ -41,7 +41,7 @@ def login_post():
 
     payload = {
         'username': username,
-        'roles': [x[0] for x in user_dao.user_roles(username)]
+        'roles': [x[1] for x in user_dao.user_roles(username)]
     }
 
     payload_token = jwt.encode(payload, secret, algorithm='HS256')

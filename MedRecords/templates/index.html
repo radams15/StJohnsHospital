@@ -6,7 +6,11 @@
 
     <body>
         <h1>MedRecords</h1>
-        <h3>User: {{ username }}</h3>
+        <h2>User: {{ username }}</h2>
+
+    {% for evt in patient_data %}
+        <p>{{ evt }}</p>
+    {% endfor %}
     </body>
 
 </html>
