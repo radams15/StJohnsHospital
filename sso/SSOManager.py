@@ -13,7 +13,7 @@ class SSOManager(object):
         if info is None:
             return False
 
-        _, pass_hash = info
+        pass_hash = info['pass']
 
         salt, hash = pass_hash.split(':')
 

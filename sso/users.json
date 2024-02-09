@@ -1,0 +1,47 @@
+{
+  "users": [
+   {
+    "username": "patient1",
+    "pass": "e2c3c21e3bca451cbc90d85d70af7872:c6c92bb32f526a8bb55e7702f90993768dc4b64fbf37a6ce43849c600ce99943",
+     "roles": [0]
+   },
+   {
+    "username": "patient2",
+    "pass": "229a6ee23bb6409ca4c38ef905f3d1e3:17111f5c911ae55e3c718a706e2aed36c9a9f6872c8bf4767e2c154c4a24aa31",
+     "roles": [0]
+   },
+   {
+    "username": "pharmacist1",
+    "pass": "6cc170791c484f01ad1ae26d55f36870:0edeaa026b1c525f1980c1105bd85373b93912611ebe13dba01d0376c81371fc",
+     "roles": [3]
+   },
+   {
+    "username": "doctor1",
+    "pass": "c227d859e3c449b695993173186397cb:932c7748714b03bc34ee60fb2cb570901fdef6aaa791326bcd46a2dc8a792147",
+     "roles": [1]
+   },
+   {
+    "username": "finance1",
+    "pass": "7aeacc32097a4ca6920b63298f367c14:b6081d0e99a9ed61a7fa2b252a16ba440e0362cc4ca8c83666fb8b5cda3b77d9",
+     "roles": [2]
+   },
+   {
+    "username": "partner1",
+    "pass": "3153806f45644af8a96010340bd2fde6:05f788f038bbea76f7cec9d589c8b4dc9e0ecd1f3f403ea4a8e4e7beec1afdfc",
+     "roles": [4]
+   },
+   {
+    "username": "partner2",
+    "pass": "8aeb0442e2ff4583a1a51254bdff9c95:ccf20f87ea7b34df0bac346ba0559c1e57214220a40d85157ddd1c91a6e120e8",
+     "roles": [4]
+   }
+  ],
+
+  "roles": [
+    "patient",
+    "doctor",
+    "finance",
+    "pharmacy",
+    "partner"
+  ]
+}

@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 load_dotenv('../.env')
 
-user_dao = UserDao("users.sqlite")
+user_dao = UserDao("users.json")
 sso_manager = SSOManager(user_dao)
 
 secret = os.getenv('SECRET')
@@ -50,4 +50,4 @@ def login_post():
 
 
 if __name__ == '__main__':
-    app.run(port=1111)
+    app.run(port=1111, debug=True)
