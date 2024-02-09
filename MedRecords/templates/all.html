@@ -11,7 +11,10 @@
     {% for patient in patient_data %}
         <h3>{{ patient['username'] }}</h3>
         {% for record in patient['records'] %}
-            <p>{{ record }}</p>
+            <p>Type => {{ record['type'] }}</p>
+            <p>Message => {{ record['message'] }}</p>
+            <p>Date => {{ record['date'] }}</p>
+            <hr>
         {% endfor %}
     {% endfor %}
     </body>

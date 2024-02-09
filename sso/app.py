@@ -17,6 +17,7 @@ sso_manager = SSOManager(user_dao)
 
 secret = os.getenv('SECRET')
 
+
 @app.route('/login', methods=['GET'])
 def login_page():
     try:

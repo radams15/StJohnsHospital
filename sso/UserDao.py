@@ -1,5 +1,6 @@
 import json
 
+
 class UserDao(object):
     def __init__(self, file):
         self.file = file
@@ -9,7 +10,7 @@ class UserDao(object):
     def get_user(self, username):
         try:
             return next(filter(lambda x: x['username'] == username, self.data["users"]))
-        except StopIteration: # No users with that name
+        except StopIteration:  # No users with that name
             return None
 
     def user_roles(self, username):

@@ -9,7 +9,10 @@
         <h2>User: {{ username }}</h2>
 
     {% for evt in patient_data %}
-        <p>{{ evt }}</p>
+        <p>Type => {{ evt['type'] }}</p>
+        <p>Message => {{ evt['message'] }}</p>
+        <p>Date => {{ evt['date'] }}</p>
+        <hr>
     {% endfor %}
     </body>
 
