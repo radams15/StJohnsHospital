@@ -28,7 +28,7 @@
    "card_no": "8038357205",
    "cvv": "395"
   },
-  "records": [
+  "payments": [
    {
     "amount": 5000,
     "date": "2023-11-20"

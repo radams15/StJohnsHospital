@@ -1,5 +1,5 @@
 import os
-from itertools import chain
+from itertools import chain, tee
 from functools import wraps
 
 from flask import *
@@ -33,7 +33,7 @@ def authorise(f):
 
             return f(data, *args, **kwargs)
         else:
-            return redirect('?'.join((f'{auth_addr}/login', f'redirect=http://localhost:2222/callback')))
+            return redirect('?'.join((f'{auth_addr}/login', f'redirect=http://localhost:3333/callback')))
 
     return decorator
 
@@ -51,10 +51,15 @@ def callback():
 @app.route('/all')
 @authorise
 def view_all(data):
-    if not any(x in data['roles'] for x in ['doctor']):
+    if not any(x in data['roles'] for x in ['finance']):
         return make_response({'status': 'failure', 'message': 'unauthorised'}, 400)
 
     username = data['username']
+
+    data = patient_data_dao.data
+
+    for user in data:
+        user['total'] = sum(x['amount'] for x in user['payments'])
 
     return render_template('all.html', username=username, patient_data=patient_data_dao.data)
 
@@ -67,15 +72,17 @@ def patient(data):
 
     username = data['username']
 
-    patient_data = chain.from_iterable(
-        map(lambda x: x['records'],
+    patient_data = list(chain.from_iterable(
+        map(lambda x: x['payments'],
             filter(lambda x: x['username'] == username,
                    patient_data_dao.data
                    )
             )
-    )
+    ))
 
-    return render_template('patient.html', username=username, patient_data=patient_data)
+    total = sum(map(lambda x: x['amount'], patient_data))
+
+    return render_template('patient.html', username=username, patient_data=patient_data, total=total)
 
 
 @app.route('/logout')
@@ -92,4 +99,4 @@ def index(data):
 
 
 if __name__ == '__main__':
-    app.run(port=2222, debug=True)
+    app.run(port=3333, debug=True)

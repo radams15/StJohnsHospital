@@ -1,21 +1,21 @@
 <html lang="en">
 
     <head>
-        <title>MedRecords</title>
+        <title>FinCare</title>
     </head>
 
     <body>
-        <h1>MedRecords - All</h1>
+        <h1>FinCare - All</h1>
         <h2>User: {{ username }}</h2>
 
     {% for patient in patient_data %}
         <h3>{{ patient['username'] }}</h3>
-        {% for record in patient['records'] %}
-            <p>Type => {{ record['type'] }}</p>
-            <p>Message => {{ record['message'] }}</p>
+        {% for record in patient['payments'] %}
+            <p>Amount => £{{ record['amount']/100 }}</p>
             <p>Date => {{ record['date'] }}</p>
             <hr>
         {% endfor %}
+        <p>Total: £{{ patient['total']/100 }}</p>
     {% endfor %}
     </body>
 

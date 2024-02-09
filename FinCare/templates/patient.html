@@ -1,19 +1,20 @@
 <html lang="en">
 
     <head>
-        <title>MedRecords</title>
+        <title>FinCare</title>
     </head>
 
     <body>
-        <h1>MedRecords</h1>
+        <h1>FinCare</h1>
         <h2>User: {{ username }}</h2>
 
     {% for evt in patient_data %}
-        <p>Type => {{ evt['type'] }}</p>
-        <p>Message => {{ evt['message'] }}</p>
+        <p>Amount => £{{ evt['amount']/100 }}</p>
         <p>Date => {{ evt['date'] }}</p>
         <hr>
     {% endfor %}
+
+    <p>Total: £{{ total/100 }}</p>
     </body>
 
 </html>

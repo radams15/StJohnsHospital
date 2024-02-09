@@ -1,16 +1,16 @@
 <html lang="en">
 
     <head>
-        <title>MedRecords</title>
+        <title>FinCare</title>
     </head>
 
     <body>
-        <h1>MedRecords</h1>
+        <h1>FinCare</h1>
 
         {% if 'patient' in roles %}
             <a href="{{ url_for('patient') }}">Patient</a>
-        {% elif 'doctor' in roles %}
-            <a href="{{ url_for('view_all') }}">Doctor - All</a>
+        {% elif 'finance' in roles %}
+            <a href="{{ url_for('view_all') }}">Finance - All</a>
         {% endif %}
 
         <a href="{{ url_for('logout') }}">Logout</a>
