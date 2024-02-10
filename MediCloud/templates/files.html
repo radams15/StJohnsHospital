@@ -1,0 +1,15 @@
+<html lang="en">
+
+    <head>
+        <title>MediCloud</title>
+    </head>
+
+    <body>
+        <h1>MediCloud</h1>
+
+    {% for file in files %}
+        <a href="{{ url_for('file', filename=file['name']) }}">{{ file['name'] }}</a>
+    {% endfor %}
+    </body>
+
+</html>
