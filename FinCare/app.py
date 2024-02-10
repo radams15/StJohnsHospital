@@ -1,13 +1,17 @@
 import os
+import sys
 import uuid
-from itertools import chain, tee
-from functools import wraps
+from itertools import chain
 
 from flask import *
 from dotenv import load_dotenv
-import jwt
 
 from PatientDataDao import PatientDataDao
+
+sys.path.append('../shared')
+
+import Authorisation
+
 
 load_dotenv('../.env')
 
@@ -20,24 +24,7 @@ auth_addr = os.getenv('AUTH_ADDR')
 
 patient_data_dao = PatientDataDao('data.json')
 
-
-def authorise(f):
-    @wraps(f)
-    def decorator(*args, **kwargs):
-        if 'authentication' in session.keys():
-            auth = session['authentication']
-            try:
-                data = jwt.decode(auth, secret, algorithms='HS256')
-            except Exception as e:
-                print(e)
-                return make_response({'status': 'failure', 'message': 'invalid authorisation token'})
-
-            return f(data, *args, **kwargs)
-        else:
-            return redirect('?'.join((f'{auth_addr}/login', f'redirect=http://localhost:3333/callback')))
-
-    return decorator
-
+authorise = Authorisation.create_authorisation(secret, auth_addr, "http://localhost:3333")
 
 @app.route('/callback')
 def callback():
