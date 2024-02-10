@@ -1,0 +1,27 @@
+[
+ {
+  "username": "patient1",
+  "records": [
+   {
+    "type": "prescription",
+    "prescription": "paracetamol once daily",
+    "date": "2023-12-01"
+   },
+   {
+    "type": "prescription",
+    "prescription": "morphine drip",
+    "date": "2023-12-07"
+   }
+  ]
+ },
+ {
+  "username": "patient2",
+  "records": [
+   {
+    "type": "prescription",
+    "prescription": "antiseptic cream to apply to hand daily",
+    "date": "2023-11-20"
+   }
+  ]
+ }
+]

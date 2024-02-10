@@ -1,0 +1,19 @@
+<html lang="en">
+
+    <head>
+        <title>Prescriptions</title>
+    </head>
+
+    <body>
+        <h1>Prescriptions</h1>
+        <h2>User: {{ username }}</h2>
+
+    {% for evt in patient_data %}
+        <p>Type => {{ evt['type'] }}</p>
+        <p>Prescription => {{ evt['prescription'] }}</p>
+        <p>Date => {{ evt['date'] }}</p>
+        <hr>
+    {% endfor %}
+    </body>
+
+</html>

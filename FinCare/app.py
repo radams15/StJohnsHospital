@@ -1,4 +1,5 @@
 import os
+import uuid
 from itertools import chain, tee
 from functools import wraps
 
@@ -11,11 +12,11 @@ from PatientDataDao import PatientDataDao
 load_dotenv('../.env')
 
 app = Flask(__name__)
+app.secret_key = uuid.uuid4().hex
 
 secret = os.getenv('SECRET')
 auth_addr = os.getenv('AUTH_ADDR')
 
-app.secret_key = secret
 
 patient_data_dao = PatientDataDao('data.json')
 
