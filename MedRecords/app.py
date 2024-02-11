@@ -22,7 +22,7 @@ auth_addr = os.getenv('AUTH_ADDR')
 
 patient_data_dao = PatientDataDao('data.json', secret)
 
-authorise = Authorisation.create_authorisation(secret, auth_addr, "http://localhost:2222")
+authorise = Authorisation.create_authorisation(secret, auth_addr, "https://localhost:2222")
 
 
 @app.route('/callback')

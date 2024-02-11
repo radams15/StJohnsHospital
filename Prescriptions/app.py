@@ -21,7 +21,7 @@ auth_addr = os.getenv('AUTH_ADDR')
 
 patient_data_dao = PatientDataDao('data.json', secret)
 
-authorise = Authorisation.create_authorisation(secret, auth_addr, "http://localhost:4444")
+authorise = Authorisation.create_authorisation(secret, auth_addr, "https://localhost:4444")
 
 @app.route('/callback')
 def callback():

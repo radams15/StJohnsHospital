@@ -22,7 +22,7 @@ auth_addr = os.getenv('AUTH_ADDR')
 
 file_dao = FileDao('data.json', secret)
 
-authorise = Authorisation.create_authorisation(secret, auth_addr, "http://localhost:5555")
+authorise = Authorisation.create_authorisation(secret, auth_addr, "https://localhost:5555")
 
 
 @app.route('/callback')
