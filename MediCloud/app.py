@@ -17,12 +17,12 @@ from FileDao import FileDao
 load_dotenv('../.env')
 
 app = Flask(__name__)
-app.secret_key = uuid.uuid4().hex
+app.secret_key = 'test' #uuid.uuid4().hex
 
 secret = os.getenv('SECRET')
 auth_addr = os.getenv('AUTH_ADDR')
 
-file_dao = FileDao('data.json')
+file_dao = FileDao('data.json', secret)
 
 authorise = Authorisation.create_authorisation(secret, auth_addr, "http://localhost:4444")
 
@@ -49,7 +49,7 @@ def files(data):
 @authorise
 def upload_file(data):
     file = request.files['file']
-    shared = re.split(f'[\s,;]', request.form['shared']) or []
+    shared = filter(lambda x: x, map(str.strip, re.split(r'[\s,;]', request.form['shared']) or []))
     if not file or file.filename == '':
         flash('No selected file')
         return redirect(request.url)
@@ -64,13 +64,15 @@ def upload_file(data):
 def upload_file_page(data):
     return render_template('upload.html')
 
-@app.route('/file/<filename>', methods=['GET'])
+
+@app.route('/file/<filename>/view', methods=['GET'])
 @authorise
 def file(data, filename):
     try:
         file = file_dao.get_file(os.path.basename(filename))
-        return make_response(str(file), 200)
-    except:
+        return make_response(file, 200)
+    except FileNotFoundError as e:
+        print(e)
         return make_response({
             'status': 'failure',
             'message': 'invalid path'
