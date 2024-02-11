@@ -40,9 +40,12 @@ def login_post():
             'state': 'failure'
         }
 
+    user = user_dao.get_user(username)
+
     payload = {
         'username': username,
-        'roles': [x[1] for x in user_dao.user_roles(username)]
+        'roles': [x[1] for x in user_dao.user_roles(username)],
+        'secret': user['secret']
     }
 
     payload_token = jwt.encode(payload, secret, algorithm='HS256')
