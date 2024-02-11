@@ -3,13 +3,12 @@ import sys
 import uuid
 from itertools import chain
 
-sys.path.append('../shared')
-
-import Authorisation
-
 from flask import *
 from dotenv import load_dotenv
 
+sys.path.append('../shared')
+
+import Authorisation
 from PatientDataDao import PatientDataDao
 
 load_dotenv('../.env')
@@ -20,7 +19,7 @@ app.secret_key = uuid.uuid4().hex
 secret = os.getenv('SECRET')
 auth_addr = os.getenv('AUTH_ADDR')
 
-patient_data_dao = PatientDataDao('data.json')
+patient_data_dao = PatientDataDao('data.json', secret)
 
 authorise = Authorisation.create_authorisation(secret, auth_addr, "http://localhost:4444")
 
@@ -78,4 +77,7 @@ def index(data):
 
 
 if __name__ == '__main__':
-    app.run(port=4444, debug=True)
+    try:
+        app.run(port=4444, debug=True)
+    finally:
+        patient_data_dao.save()

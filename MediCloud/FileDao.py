@@ -1,5 +1,4 @@
 import os
-import json
 from base64 import b64encode, b64decode
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad

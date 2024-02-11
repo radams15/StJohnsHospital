@@ -1,12 +1,8 @@
 import json
+from EncryptedJsonFile import EncryptedJsonFile
 
 
-class PatientDataDao(object):
-    def __init__(self, file):
-        self.file = file
-        with open(self.file, 'r') as f:
-            self.data = json.load(f)
 
-    def save(self):
-        with open(self.file, 'w') as f:
-            json.dump(self.data, f, indent=1)
+class PatientDataDao(EncryptedJsonFile):
+    def __init__(self, file, key):
+        super().__init__(file, key, encrypted=True)

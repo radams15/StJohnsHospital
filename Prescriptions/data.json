@@ -1,27 +1,4 @@
-[
- {
-  "username": "patient1",
-  "records": [
-   {
-    "type": "prescription",
-    "prescription": "paracetamol once daily",
-    "date": "2023-12-01"
-   },
-   {
-    "type": "prescription",
-    "prescription": "morphine drip",
-    "date": "2023-12-07"
-   }
-  ]
- },
- {
-  "username": "patient2",
-  "records": [
-   {
-    "type": "prescription",
-    "prescription": "antiseptic cream to apply to hand daily",
-    "date": "2023-11-20"
-   }
-  ]
- }
-]
+{
+ "iv": "mg15HIzmncLkP528CSSwGg==",
+ "ciphertext": "jpnnC5ODug3dByi1Bu8615ZZcQTGza5fhQCfxOZl7eNJrJ5mbEDIC2mQST0wSQnsgMibHxckTiCEMtDUVeA/kHU9NFgSCZFIDZthm3Oa+QgKnBIL21mOnWTbCCFtIKqrxQmfzmVxglggP8LZsLAhcNa9rU+eQMFSXqhc4Ebd/NwwvaCzE2DvXqzpAEHzku7r2ya0Ru9K6MES/uVOoMMRkyu27vqGv3cYwIJzKysVBpscLE3/w4igaz5s/5NP9nNPc52QYclNFOE1j9Nx/I2qPKz2uZwhjyAxJxlDcISgRS1Wri34QelY1f4VUlc7CZbLkl5P5VXCY4pN1qTSPpoGsgqtZhYxHXXaqBxWCR8hpxBySb+UuwH1ih9gH9eDZBgj+7BxbxL6j5CUIFs+CQCMdyBT7jl1g6ijCGXNu1TJu1dlxoOi/GqrPbT9Rgd5o3XjZpohbdP16vDRDpQ5rvOTL/w33uyGxOb9EgSFmnuYGto="
+}

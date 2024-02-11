@@ -7,7 +7,6 @@ from Crypto.Util.Padding import pad, unpad
 
 
 class EncryptedJsonFile(object):
-
     def __init__(self, file, key, encrypted=True):
         self.file = file
         self.encrypted = encrypted
@@ -26,7 +25,7 @@ class EncryptedJsonFile(object):
         else:
             self.data = data
 
-    def save(self):
+    def save(self):    
         if self.encrypted:
             data = json.dumps(self.data).encode()
 
