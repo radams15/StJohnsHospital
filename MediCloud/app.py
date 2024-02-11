@@ -24,7 +24,7 @@ auth_addr = os.getenv('AUTH_ADDR')
 
 file_dao = FileDao('data.json', secret)
 
-authorise = Authorisation.create_authorisation(secret, auth_addr, "http://localhost:4444")
+authorise = Authorisation.create_authorisation(secret, auth_addr, "http://localhost:5555")
 
 
 @app.route('/callback')
@@ -92,4 +92,4 @@ def index(data):
 
 
 if __name__ == '__main__':
-    app.run(port=4444, debug=True, threaded=True, processes=1)
+    app.run(port=5555, debug=True, threaded=True, processes=1)
