@@ -1,9 +1,7 @@
-import glob
 import os
 import re
 import sys
 import uuid
-from itertools import chain
 
 sys.path.append('../shared')
 
@@ -17,7 +15,7 @@ from FileDao import FileDao
 load_dotenv('../.env')
 
 app = Flask(__name__)
-app.secret_key = 'test' #uuid.uuid4().hex
+app.secret_key = uuid.uuid4().hex
 
 secret = os.getenv('SECRET')
 auth_addr = os.getenv('AUTH_ADDR')
