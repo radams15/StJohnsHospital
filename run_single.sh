@@ -28,6 +28,10 @@ case $1 in
         port=4444
         ;;
 
+    CareConnect)
+        port=3355
+        ;;
+
     sso)
         port=1111
         ;;

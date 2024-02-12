@@ -1,0 +1,22 @@
+<html lang="en">
+
+    <head>
+        <title>CareConnect</title>
+    </head>
+
+    <body>
+        <h1>CareConnect - All</h1>
+        <h2>User: {{ username }}</h2>
+
+    {% for patient in patient_data %}
+        <h3>{{ patient['username'] }}</h3>
+        {% for record in patient['records'] %}
+            <p>Type => {{ record['type'] }}</p>
+            <p>Message => {{ record['message'] }}</p>
+            <p>Date => {{ record['date'] }}</p>
+            <hr>
+        {% endfor %}
+    {% endfor %}
+    </body>
+
+</html>
