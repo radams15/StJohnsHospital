@@ -37,4 +37,5 @@ case $1 in
         ;;
 esac
 
+export SECRET=$2
 run $1 0.0.0.0 $port
