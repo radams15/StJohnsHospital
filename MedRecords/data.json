@@ -1,20 +1,4 @@
-[
- {
-  "username": "patient1",
-  "records": [
-   {
-    "type": "condition",
-    "message": "male pattern baldness"
-   }
-  ]
- },
- {
-  "username": "patient2",
-  "records": [
-   {
-    "type": "condition",
-    "message": "missing arm"
-   }
-  ]
- }
-]
+{
+ "iv": "EHumG/w+4ZjzjR66ARG2Rg==",
+ "ciphertext": "YWi5rRnpzPf/DMK76VVW7hvU3cx8puwoaB8cEBxuacxnQL31z0VoF/6SnNqlqkgU6lBYSHH9/B0pL7vSdP66vWgRRSQz8EPQMoSnJRZcSMXdTee+Dl1wwFhMotVh2e+BJhlEbRVQ0cBbnBac8EQzrmGyfLCc6Xmtx1HxPn1KzYFURAmIiODoTTexkf6uM3HiF5fZf29c5cBkup+u8cTT5sZ+oJ2WbnvKXTX7UejrksxnOFdD9BS4YgiU8qCwFEca"
+}
