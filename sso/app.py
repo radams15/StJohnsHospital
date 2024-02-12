@@ -12,10 +12,10 @@ app = Flask(__name__)
 
 load_dotenv('../.env')
 
-user_dao = UserDao("users.json")
-sso_manager = SSOManager(user_dao)
-
 secret = os.getenv('SECRET')
+
+user_dao = UserDao("users.json", secret)
+sso_manager = SSOManager(user_dao)
 
 
 @app.route('/login', methods=['GET'])

@@ -1,11 +1,13 @@
 import json
+import sys
 
+sys.path.append('../shared')
 
-class UserDao(object):
-    def __init__(self, file):
-        self.file = file
-        with open(self.file, 'r') as f:
-            self.data = json.load(f)
+from EncryptedJsonFile import EncryptedJsonFile
+
+class UserDao(EncryptedJsonFile):
+    def __init__(self, file, key):
+        super().__init__(file, key, encrypted=True)
 
     def get_user(self, username):
         try:
@@ -15,7 +17,3 @@ class UserDao(object):
 
     def user_roles(self, username):
         return map(lambda x: (x, self.data['roles'][x]), self.get_user(username)["roles"])
-
-    def close(self):
-        with open(self.file, 'w') as f:
-            json.dump(self.data, f, indent=1)

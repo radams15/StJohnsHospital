@@ -1,6 +1,7 @@
 import json
 from hashlib import sha256
 from base64 import b64encode, b64decode
+import atexit
 
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
@@ -11,6 +12,7 @@ class EncryptedJsonFile(object):
         self.file = file
         self.encrypted = encrypted
         self.key = sha256(key.encode()).hexdigest()[:16].encode()
+        atexit.register(self.save)
 
         with open(self.file, 'r') as f:
             data = json.load(f)
