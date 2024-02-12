@@ -68,9 +68,7 @@ def patient(data):
 @app.route('/logout')
 @authorise
 def logout(data):
-    del session['authentication']
-    return redirect('/')
-
+    return Authorisation.logout(auth_addr)
 
 @app.route('/')
 @authorise

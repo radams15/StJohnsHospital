@@ -21,3 +21,8 @@ def create_authorisation(secret, auth_addr, redirect_path):
 
         return decorator
     return authorise
+
+def logout(auth_addr):
+    if 'authentication' in session:
+        del session['authentication']
+    return redirect(f'{auth_addr}/logout')
