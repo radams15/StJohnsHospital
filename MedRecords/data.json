@@ -1,4 +1,20 @@
-{
- "iv": "TuYetpBYgmcx8yBAHJVPKA==",
- "ciphertext": "K61FA21Ys2jMj2vQDl0+p39ZU1TqUK6hIIduzNo8kni2mMK6eh4KwcFKw36+qjHwpp0mqpeWaus0LoC/bCt5hwxHaK+UuTKNhayET+XMMlTSQd6haywsqNm8I5wMu97JePR+19A6fkE7SSot3lztqGh21TLOZ+pgWdnuy/wgQ+7vyY7IoDh2ByFVUNALc6pBTZKCjtBBCVuYOEwOgkjxMrECgPOXqiPIB0YXnw6bypBKr3lbBIVZefNqFedSf3mBhvSUpWxlo4fY0dkd53fI7o+RT1+MVRF/IMtubtPcUOa7hn5HblIIpaHpkkeuFEMdUrA2XrSJDQYh0EmFwmiZDnqWpQozg/HhtI6aC8gunkMWyxPA//xTFkZNyeIYB2PexRhZN5LTRi9hiPUFiSiKqnUlmQT5zkCLh9wctiDdgidEpx7Qpbt4p6+z/YUiyhpSPAssI2WMgZGQetgorH1wjtmVPDM/+KXwAErtepT4Gg8i6saqmfOAwcRpelw1S/K/GUVKzuk1Sq1diLSm2eOQPxDSLqZiIorpQpemuDd5M0cS2adm6be5P6AxBkzI+Ek/kMiBTp0CmhZT/acQQnBXT9dHk/e6SxxwaL064nX395k8iMvanqVUKBbvEVzFarqGgIUdtUn7aDkeoltyxoe67RqyaVqio8A5+obnrt8ZwTcZlNFa1ZHtI0sR5ODM+EkzW/SqyCv4l1Qj/3vSEfq4PKlb/+pH6kynIcdDfm7guTNLZ7s51U1TzTGwXiTWV5xT8rf3XhRcVZl9P+H8avLTEDjNp6dyuza5M+lQAoCrDzA="
-}
+[
+ {
+  "username": "patient1",
+  "records": [
+   {
+    "type": "condition",
+    "message": "male pattern baldness"
+   }
+  ]
+ },
+ {
+  "username": "patient2",
+  "records": [
+   {
+    "type": "condition",
+    "message": "missing arm"
+   }
+  ]
+ }
+]
