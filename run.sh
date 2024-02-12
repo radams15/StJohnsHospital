@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PROJECTS=(sso FinCare MediCloud MedRecords Prescriptions)
+PROJECTS=(sso FinCare CareConnect MediCloud MedRecords Prescriptions)
 # PROJECTS=(sso) 
 
 TERM=xterm
