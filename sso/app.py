@@ -4,6 +4,7 @@ import uuid
 from flask import *
 from werkzeug.exceptions import BadRequestKeyError
 import jwt
+import pyotp
 from dotenv import load_dotenv
 
 from SSOManager import SSOManager
@@ -44,7 +45,7 @@ def login_page():
 
 @app.route('/login', methods=['POST'])
 def login_post():
-    username, password, success_redirect = request.form['username'], request.form['password'], request.form['redirect']
+    username, password, otp, success_redirect = request.form['username'], request.form['password'], request.form['otp'], request.form['redirect']
 
     if not sso_manager.validate_user(username, password):
         return {
@@ -52,6 +53,12 @@ def login_post():
         }
 
     user = user_dao.get_user(username)
+
+    totp = pyotp.TOTP(user['secret'])
+    if not totp.verify(otp):
+        return {
+            'state': 'failure'
+        }
 
     payload = {
         'username': username,

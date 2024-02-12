@@ -9,6 +9,7 @@
     <form action="{{ url_for('login_post') }}" method="POST">
         <label for="username">Username: </label><input name="username" id="username">
         <label for="password">Password: </label><input name="password" id="password" type="password">
+        <label for="otp">One-time passcode: </label><input name="otp" id="otp">
         <input type="hidden" value="{{ success_redirect }}" name="redirect">
         <button type="submit">Login</button>
     </form>
