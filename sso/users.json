@@ -1,4 +1,67 @@
 {
- "iv": "o7aDyqeWhHDGDdtdBzYPrA==",
- "ciphertext": "SQYltIvG38IVACsNvPRjnoET1XZmncBg5AP3GcqgQChJto58rxauKaVPSMAQo6M3PfP/Pt81FEvoo6jmovL1w9TrdQI5/0fN6t5WseaJIqISh6Jidu/CRV5FWSQ91u+QESvK7rNsS+ro4YjQ0dvj3hgApxCWpGDN1Q9gKrPNuj9ncqYTfKfeWji8pvXnJNT5D+DZjepVwZiGJTyV0oDGSjiHI/P5WU8qsofgFQr8F2b2Hoz8o+QPtYKYHpG4L4l9TyonzZekwqdjptb8NvZ1lNkkqaFIM4zK4fup9wISJa+apLzy6RkNie2GTAXNr2B1q7n4tsWBFhN9SYwFoyHyDkuGYXM9mVtM1P0vMX4FLR+5Sy94TAetuSX7EgN6wUpMRy/9suZIsDQr343ys82JZPJzBFjQDFmrjb75irY/O6ZrwQuU8noE9BAFCBuysbU2EaoI03qHmiguJrZ5Gc2tlWOVpvJsYulmG91hpj5ZQP4OW72bM2BAQnLOQE/XfQ3DXbSHJc0DIxzoE4n+ym/hy7AG1R54ZS7wnMHxOiuYK7I6gYKPCCIi8kQsT5s54SCbCIANnzsX3kZZXBYDhHqBzKge1/lwVuDyzufJtOVIDc3ELycMXJsmnYM2idQ+P75k0WN6WUxfETV2hlX31CCReOSsTx8tEvzzXVq7IaotZdzDCMoRQl82lpmUPWOiOLQzY3fuUskh3B0yzTjdJy0LweZsDn+0YvRmmoxw53eE8JzZKuUwy2fFSBBTq+pSFFVWsgJiss2MoHtxzsOEouIwzeAd0w6+YzCK4dE1wEpjXixsw+bKmCsKdsoCyrrwGL6RzWGiFVdEAe5bB5kYvjo8K/VBjZv84s9YS7asmxB2BWygULzlaMt5k0DzFQ4AOCsm1yGzQZKqZDh3DMb7BmyhXA4fq7LO46gat0+ZBy0qdq6+6Pwj8Mm1EiknPught4vllSGbywOQFgFwGtOCkocDul2tBNLoV4FgnSv2ieyUSF2vBLos+uM02BZ0aMedzOHXUo/tkuRqo1k9yOI9cQBMuN4VnLMLze/6+4f0t0qYhhMuyTEqqovcRU2WNLJZ2rvRDr3IhrH2dyty9InZN+htj37uvbE0lbV0NJdJzjNwXV/BZ+cKNyOhN1KrBPNtfeomlM499YbL2kAnkWjH2DVtBk0e7DBtthc3dQYLvDtaxKR3KUymh9jrdsdGytjj2xILiTzHLVA3UwFOtyNg4EVEMkOMUzlE3TNTdocfG2TXJ9pgedNvBi4zTqjaft8skzl+MjT5zt8rZ14TKely2HoV7Dz9ObCBsbC3jrPSvvzRtWUL3aeq0SxWXuMhNjPYTgbhOd187tFqjGGPyXSB7NVENChHE6FC0x7PMxQ3IbersiSyUAMpqPJcc1FrfwETdeCDzDwLky3XmTxdXf7uZOm2DY44moNU+Bx3APoEpxXRlVbUKCAnkWo/Huwqwl8XZ7bsoXINVp94B6CZA11UV/f/P60dN8Sa91szcLpKjIDXfqUpmlyfPMPqrN4vA7IQvvdKxTKkbkS4/2Cgs54tlMfIkM6cn4IuJsjtGdC57SnVihipRbvggfx5Qj5zXgRaXGjEpEopwoseDuObJ9J8aAL1hAg8dLb5+8KfKdCWv0Mtm1Qa9lrU6+Bks/DSHyQEH+cOtA+2UF7yDeDWdTpqnxtYfYMQVzy5/QnZ6uop6XAmbBvandaoAmcHvATu3S6j9njWyKCpiB+Oa2jNa7xkh5CLTqmRLYVlnwf0GDT+fBx6Mm+B71nbVzIy/rFB32/3isUe07msqWuyVaNEr/vPSh7BwAHTwBxAaZyAVI01N/7MtJ5jHsh35fZwlb9GyAShmicDfLdh9baYX+YOig/jN/GwkNXJ09mHa/USSVb2ma/jdbJBBJ1XIT6s99WPRN3MYyCMWTCAMaLAEH4EY6V/U/3iaw=="
+ "users": [
+  {
+   "username": "patient1",
+   "pass": "e2c3c21e3bca451cbc90d85d70af7872:c6c92bb32f526a8bb55e7702f90993768dc4b64fbf37a6ce43849c600ce99943",
+   "roles": [
+    0
+   ],
+   "secret": "2Z5ZHORYGI53DED3XDE3QOFLLXNY3LFT"
+  },
+  {
+   "username": "patient2",
+   "pass": "229a6ee23bb6409ca4c38ef905f3d1e3:17111f5c911ae55e3c718a706e2aed36c9a9f6872c8bf4767e2c154c4a24aa31",
+   "roles": [
+    0
+   ],
+   "secret": "VTGE6PMP5G2OZFQ7EHLYAVVUEK5VPFKV"
+  },
+  {
+   "username": "pharmacist1",
+   "pass": "6cc170791c484f01ad1ae26d55f36870:0edeaa026b1c525f1980c1105bd85373b93912611ebe13dba01d0376c81371fc",
+   "roles": [
+    3
+   ],
+   "secret": "FECWJ2KW53YDMIMDFHCVO3DMJCSM55RP"
+  },
+  {
+   "username": "doctor1",
+   "pass": "c227d859e3c449b695993173186397cb:932c7748714b03bc34ee60fb2cb570901fdef6aaa791326bcd46a2dc8a792147",
+   "roles": [
+    1
+   ],
+   "secret": "ST6DDQF77NB3SQ24IORBUQR3G4JBLYF5"
+  },
+  {
+   "username": "finance1",
+   "pass": "7aeacc32097a4ca6920b63298f367c14:b6081d0e99a9ed61a7fa2b252a16ba440e0362cc4ca8c83666fb8b5cda3b77d9",
+   "roles": [
+    2
+   ],
+   "secret": "3JJHOOCD4TFH7TJB2OUEU55ITXJA5KMN"
+  },
+  {
+   "username": "partner1",
+   "pass": "3153806f45644af8a96010340bd2fde6:05f788f038bbea76f7cec9d589c8b4dc9e0ecd1f3f403ea4a8e4e7beec1afdfc",
+   "roles": [
+    4
+   ],
+   "secret": "OJRQJWUDE45JR3WSWBK46H5OHD4ABKAE"
+  },
+  {
+   "username": "partner2",
+   "pass": "8aeb0442e2ff4583a1a51254bdff9c95:ccf20f87ea7b34df0bac346ba0559c1e57214220a40d85157ddd1c91a6e120e8",
+   "roles": [
+    4
+   ],
+   "secret": "PBXNPL3OD6KETBFGJN7WMBZFIGTI3CZM"
+  }
+ ],
+ "roles": [
+  "patient",
+  "doctor",
+  "finance",
+  "pharmacy",
+  "partner"
+ ]
 }

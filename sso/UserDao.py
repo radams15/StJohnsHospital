@@ -7,7 +7,7 @@ from EncryptedJsonFile import EncryptedJsonFile
 
 class UserDao(EncryptedJsonFile):
     def __init__(self, file, key):
-        super().__init__(file, key, encrypted=True)
+        super().__init__(file, key, encrypted=False)
 
     def get_user(self, username):
         try:
