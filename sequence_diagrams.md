@@ -2,10 +2,12 @@
 
 ## Running
 
+The login secret is: `a-very-long-secret-pls-dont-steal`
+
 ```bash
 
 $ pip3 install -r requirements.txt
-$ 
+$ python3 run.py
 
 ```
 

@@ -25,7 +25,8 @@ def run_single(name, host, secret):
     return subprocess.Popen(['flask', 'run', f'--host={host}', f'--port={port}', f'--cert={CERT}', f'--key={KEY}'], cwd=name, env=env)
 
 processes = []
-secret = 'a-very-long-secret-pls-dont-steal'
+
+secret = input('Secret key: ')
 
 for project in PROJECTS.keys():
     processes.append(run_single(project, 'localhost', secret))
