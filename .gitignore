@@ -5,3 +5,4 @@ venv/
 *.pem
 *.key
 *.swp
+__pycache__
