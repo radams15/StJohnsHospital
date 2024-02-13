@@ -6,9 +6,9 @@ PROJECTS=(sso FinCare CareConnect MediCloud MedRecords Prescriptions)
 # secret='a-very-long-secret-pls-dont-steal' 
 read secret
 
-TERM=xterm
+TERM=gnome-terminal
 
 for proj in ${PROJECTS[@]}
 do
-    ($TERM -T "$proj" -e "bash run_single.sh $proj '$secret'") &
+    ($TERM --title="$proj" -e "bash run_single.sh $proj '$secret'") &
 done

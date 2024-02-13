@@ -1,4 +1,32 @@
-## SSO
+# St John's Hostpital Cryptosystem
+
+## Running
+
+```bash
+
+$ pip3 install -r requirements.txt
+$ 
+
+```
+
+
+## Sequence Diagrams
+
+
+### Server Initialisation
+
+```mermaid
+sequenceDiagram
+    Client ->> Program: Start
+    Program ->> Client: Provide key
+    Client ->> Program: Secret key
+    Program ->> Encrypted "Database": Decrypt with secret key
+    Encrypted "Database" ->> Program: Successfully decrypted database
+    
+    Program ->> Client: Running
+```
+
+### SSO
 
 ```mermaid
 sequenceDiagram
@@ -12,7 +40,7 @@ sequenceDiagram
     Application->>Client: Authorised page response
 ```
 
-## MediCloud
+### MediCloud
 
 ```mermaid
 sequenceDiagram

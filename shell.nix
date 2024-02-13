@@ -12,6 +12,7 @@ in
   pkgs.mkShell {
     nativeBuildInputs = with pkgs.buildPackages; [
       pyPkgs
+      gnome3.gnome-terminal
     ];
 }
 
