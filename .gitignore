@@ -6,3 +6,5 @@ venv/
 *.key
 *.swp
 __pycache__
+readme.pdf
+submission.zip
