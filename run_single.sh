@@ -9,8 +9,6 @@ function run {
     cd $1 && python3 -m flask run --host=$2 --port=$3 --cert=$CERT --key=$KEY && cd ..
 }
 
-source ./MediCloud/venv/bin/activate
-
 port=0
 case $1 in
     FinCare)
